@@ -2,6 +2,17 @@
 // run by the browser each time your view template is loaded
 import * as THREE from 'three';
 
+const uniforms = {
+    colorB: {
+        type: 'vec3',
+        value: new THREE.Color("rgba(255, 100, 70)")
+    },
+    colorA: {
+        type: 'vec3',
+        value: new THREE.Color("rgb(40, 255, 20)")
+    }
+};
+
 const vertexShader = `
   varying vec3 vUv;
 
@@ -30,17 +41,6 @@ export default class App {
         this.scene = scene;
         this.camera = camera;
         this.render = render;
-
-        const uniforms = {
-            colorB: {
-                type: 'vec3',
-                value: new THREE.Color("rgba(255, 100, 70)")
-            },
-            colorA: {
-                type: 'vec3',
-                value: new THREE.Color("rgb(40, 255, 20)")
-            }
-        };
 
         const material =  new THREE.ShaderMaterial({
             uniforms,
