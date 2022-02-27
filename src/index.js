@@ -22,7 +22,7 @@ const setupScene = () => {
     document.body.appendChild(renderer.domElement);
 
     // Position our camera so we can see the cube
-    camera.position.z = 5;
+    camera.position.z = 10;
 
     // Add a directional light to the scene
     const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
