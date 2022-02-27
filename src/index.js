@@ -1,6 +1,6 @@
 import './index.css';
 import * as THREE from 'three';
-import AppClass from './App';
+import SceneClass from './Scene';
 import reportWebVitals from './reportWebVitals';
 
 const CLEAR_COLOR = 0xdfdfdf;
@@ -50,14 +50,14 @@ const {
 } = setupScene();
 
 // Initialize the App
-const App = new AppClass({ scene, camera, render });
+const Scene = new SceneClass({ scene, camera, render });
 
 // Start the render loop
 function render() {
     requestAnimationFrame(render);
 
     // Render the App on each frame!
-    App._render();
+    Scene._render();
 
     renderer.render(scene, camera);
 };

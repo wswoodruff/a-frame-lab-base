@@ -33,7 +33,7 @@ const fragmentShader = `
     }
 `;
 
-export default class App {
+export default class Scene {
 
     constructor({ scene, camera, render }) {
         this.scene = scene;
