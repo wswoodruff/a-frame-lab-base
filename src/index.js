@@ -57,7 +57,7 @@ function render() {
     requestAnimationFrame(render);
 
     // Render the App on each frame!
-    // App.render();
+    App._render();
 
     renderer.render(scene, camera);
 };

@@ -16,6 +16,7 @@ const vertexShader = `
 const fragmentShader = `
     uniform vec3 colorA;
     uniform vec3 colorB;
+
     varying vec3 vUv;
 
     void main() {
@@ -31,8 +32,14 @@ export default class App {
         this.render = render;
 
         const uniforms = {
-            colorB: {type: 'vec3', value: new THREE.Color("rgba(255, 100, 70)")},
-            colorA: {type: 'vec3', value: new THREE.Color("rgb(40, 255, 20)")}
+            colorB: {
+                type: 'vec3',
+                value: new THREE.Color("rgba(255, 100, 70)")
+            },
+            colorA: {
+                type: 'vec3',
+                value: new THREE.Color("rgb(40, 255, 20)")
+            }
         };
 
         const material =  new THREE.ShaderMaterial({
@@ -49,7 +56,7 @@ export default class App {
         scene.add(this.cube);
     }
 
-    render() {
+    _render() {
         // Rotate our cube
         this.cube.rotation.x += 0.01;
         this.cube.rotation.y += 0.01;
