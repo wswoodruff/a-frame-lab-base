@@ -1,5 +1,3 @@
-// client-side js
-// run by the browser each time your view template is loaded
 import * as THREE from 'three';
 
 const uniforms = {
@@ -56,6 +54,7 @@ export default class App {
         scene.add(this.cube);
     }
 
+    // Using "render" as a func name causes problems
     _render() {
         // Rotate our cube
         this.cube.rotation.x += 0.01;
